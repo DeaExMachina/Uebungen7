@@ -1,14 +1,40 @@
 public class Grundsteuer {
 
     public int[] grundsteuerBerechnen(int[][] steuer){
+        double typ1 = 3.20;
+        double typ2 = 2.10;
+        double typ3 = 0.90;
+        double laenge;
+        double breite;
+
+
         for (int i = 0; i < steuer.length; i++){
             for (int j = 0; j < steuer[i].length; j++){
-                steuer[0][0] = double typ1; //typ1
+                if (steuer[i][j] == typ1) {
+                    double steuerSumme = typ1 * laenge * breite;
+                }
+                else if (steuer[i][j] == typ2) {
+                    double steuerSumme = typ2 * laenge * breite;
+                }
+                else if (steuer[i][j] == typ3){
+                    double steuerSumme = typ3 * laenge * breite;
+                }
+                else {
+                    return null;
+                }
+                steuer[0][0] = typ1;
+                steuer[0][1] = typ2;
+                steuer[0][2] = typ3;
 
 
             }
         }
-        return sum;
+        return steuerSumme;
+    }
+
+    public static void main(String[] args) {
+
+        Grundsteuer hansi = new Grundsteuer();
     }
 
 }
